@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Simple HTML Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        textarea {
+            min-height: 100px;
+        }
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    
+    <div class="container">
+        <div class="success-message" id="successMessage">
+            Thank you for your message! We'll get back to you soon.
+        </div>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <p style="margin-top: 20px;">
+            <a href="index.html">← Back to Home</a>
+        </p>
+    </div>
+    
+    <div class="footer">
+        <p>Created on March 9, 2025 | Today is <span id="currentDate"></span></p>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server
+            // For this example, we'll just display the success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset the form
+            this.reset();
+            
+            // Scroll to the top of the form
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
