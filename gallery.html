@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Simple HTML Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .gallery-item {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <div class="container">
+        <h2>Browse Our Images</h2>
+        <p>This is a simple image gallery using placeholder images.</p>
+        
+        <div class="gallery">
+            <!-- Gallery items with placeholder images -->
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=Image+1" alt="Placeholder Image 1">
+                <div class="gallery-caption">Nature Landscape</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/e74c3c/ffffff?text=Image+2" alt="Placeholder Image 2">
+                <div class="gallery-caption">Urban Architecture</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/2ecc71/ffffff?text=Image+3" alt="Placeholder Image 3">
+                <div class="gallery-caption">Forest Wilderness</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/f1c40f/ffffff?text=Image+4" alt="Placeholder Image 4">
+                <div class="gallery-caption">Desert Sunset</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/9b59b6/ffffff?text=Image+5" alt="Placeholder Image 5">
+                <div class="gallery-caption">Mountain View</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Image+6" alt="Placeholder Image 6">
+                <div class="gallery-caption">Ocean Waves</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Created on March 9, 2025 | Today is <span id="currentDate"></span></p>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
